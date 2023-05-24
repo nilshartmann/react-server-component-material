@@ -60,7 +60,7 @@ Potential consequences:
 
 In a "classic" client-side only React App, depending on the architecture of your application you might encouter a pattern called "client side waterfalls" when datafetching. That happens if your parent component A loads data then renders child component B that in turn also loads data. As B requires the loaded data from A. For example A is searching a User by its name, forwards the User (id) to B and then B loads profile data for that User. Here component B cannot fetch the user profile data in parallel with A, as the required information (user id) is available only after the fetch request from A returned).
 
-While the problem still occurs on react server components, the app might be able to fetch the data faster, because it does not need to make client-server round-trips for each request. If the data your components need, is "nearer" to your application, requests might be faster (less delay, less ...)
+While the problem still occurs on react server components, the app might be able to fetch the data faster, because it does not need to make client-server round-trips for each request. If the data your components need, is "nearer" to your application, requests might be faster (less delay, less latency)
 If and how much you profit from this, depends on your runtime architecture and deployment I think. Remember: of course you still need your data, only the way where and how it is fetched changes.
 
 **Your code _might_ be easier/shorter**
