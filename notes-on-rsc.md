@@ -100,7 +100,8 @@ Also understanding what exactly happens when your code runs is harder to underst
 
 ## What is Next.js and what is RSC?
 
-If you want to use RSC currently, your probably need to use Next.JS (there is an open-source [waku](https://github.com/dai-shi/waku), but I don't think is production ready).
+If you want to use RSC currently, your probably need to use Next.JS. There are some open-source alternatives ([waku](https://github.com/dai-shi/waku), [simple-rsc](https://github.com/bholmesdev/simple-rsc), [vite-rsc](https://github.com/cyco130/vite-rsc)) but I don't think they are production ready, and some of them seem to be experiments only).
+
 While using Next.JS is not bad per se, Next.JS adds a lot of its own ideas and concepts to the tech stack that has consequences of behaviour, architecture und code of your application (not that this is neither "good" or "bad", it just "is"). For example, you have to use the App Router. You're forced to deal with the powerful but complex caching system of Next.js.
 
 You have to learn and understand the [various render modes in Next.js](https://nextjs.org/docs/app/building-your-application/rendering) in Next.js, that are [quite complex](https://github.com/apollographql/apollo-client-nextjs/blob/pr/RFC-2/RFC.md#nextjs-specifics-static-and-dynamic-renders) and might change due to nuances in your code (add a [dynamic function](https://nextjs.org/docs/app/building-your-application/rendering/static-and-dynamic-rendering#using-dynamic-functions) like `useSearchParams` or `headers` in your code for example), that are not obvious to beginners I think.
